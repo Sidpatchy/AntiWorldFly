@@ -2,15 +2,13 @@
 <img src ="https://github.com/PyvesB/AntiWorldFly/blob/master/images/banner.png?raw=true" />
 </p>
 
-**AntiWorldFly disables flying and chosen commands when joining or playing in specific worlds, on Minecraft servers running Bukkit or Spigot.**
+**AntiWorldFly disables flying, elytras, and chosen commands when joining or playing in specific worlds, on Minecraft servers running Bukkit or Spigot.**
 
 # Project status
 
-~~This project is no longer offically maintained. I, Sidpatchy, have forked the plugin and intend to continue development in the future. New builds can be found in the [releases section of this repository](https://github.com/Sidpatchy/AntiWorldFly/releases).~~
+This project is no longer maintained by its original author. I, Sidpatchy, have taken over development of the plugin and intend to continue development in the future. New builds can be found in the [releases section of this repository](https://github.com/PyvesB/AntiWorldFly/releases), as well as on Bukkit and Spigot.
 
-~~Over the next couple of days I will be working on writing new and improved documentation as well as cleaning up the plugin.~~
-
-This fork is no longer needed... future development will take place on the plugin's original repository.
+Over the next couple of days I will be working on writing new and improved documentation as well as cleaning up the plugin.
 
 # Useful links
 
@@ -18,9 +16,9 @@ The **Wiki** of Anti World Fly is available by clicking on the *Wiki* tab at the
 
 For more *information and download links*, please visit the project's webpages:
 
-[AntiWorldFly - Bukkit](http://dev.bukkit.org/bukkit-plugins/anti-world-fly/)
-
 [AntiWorldFly - Spigot](https://www.spigotmc.org/resources/anti-world-fly.5357/)
+
+[AntiWorldFly - Bukkit](http://dev.bukkit.org/bukkit-plugins/anti-world-fly/)
 
 Feel free to visit **HelloMinecraft**, the plugin's official server (french server):
 [![HelloMinecraft](http://img11.hostingpics.net/pics/487719servericon.png)](http://hellominecraft.fr/)

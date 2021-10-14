@@ -13,6 +13,7 @@ import java.util.Objects;
  * Class in charge of displaying the plugin's help (/awf help).
  * 
  * @author Pyves
+ * @maintainer Sidpatchy
  */
 public class HelpCommand {
 
@@ -25,17 +26,17 @@ public class HelpCommand {
 	public void getHelp(CommandSender sender) {
 		// Header.
 		sender.sendMessage(ChatColor.BLUE + "------------------ " + ChatColor.WHITE + ChatColor.BLUE + plugin.getIcon()
-				+ ChatColor.translateAlternateColorCodes('&', " &9AntiWorldFly ") + ChatColor.BLUE + plugin.getIcon()
+				+ ChatColor.translateAlternateColorCodes('&', " &7AntiWorldFly ") + ChatColor.BLUE + plugin.getIcon()
 				+ ChatColor.WHITE + ChatColor.BLUE + " ------------------");
 
 		sendJsonClickableHoverableMessage(sender,
-				plugin.getChatHeader() + ChatColor.BLUE + "/awf list" + ChatColor.WHITE + " > "
+				ChatColor.BLUE + "/awf list" + ChatColor.WHITE + " > "
 						+ plugin.getPluginLang().getString("awf-command-list", "List worlds in which AWF operates."),
 				"/awf list", plugin.getPluginLang().getString("awf-command-list-hover",
 						"Flying and some specific commands are disabled in these worlds."));
 
 		sendJsonClickableHoverableMessage(sender,
-				plugin.getChatHeader() + ChatColor.BLUE + "/awf info" + ChatColor.WHITE + " > "
+				ChatColor.BLUE + "/awf info" + ChatColor.WHITE + " > "
 						+ plugin.getPluginLang().getString("awf-command-info",
 								"Display various information about the plugin."),
 				"/awf info", plugin.getPluginLang().getString("awf-command-info-hover",
@@ -43,7 +44,7 @@ public class HelpCommand {
 
 		if (sender.hasPermission("antiworldfly.use")) {
 			sendJsonClickableHoverableMessage(sender,
-					plugin.getChatHeader() + ChatColor.BLUE + "/awf reload" + ChatColor.WHITE + " > "
+					ChatColor.BLUE + "/awf reload" + ChatColor.WHITE + " > "
 							+ plugin.getPluginLang().getString("awf-command-reload",
 									"Reload the plugin's configuration."),
 					"/awf reload", plugin.getPluginLang().getString("awf-command-reload-hover",
@@ -52,7 +53,7 @@ public class HelpCommand {
 
 		if (sender.hasPermission("antiworldfly.use")) {
 			sendJsonClickableHoverableMessage(sender,
-					plugin.getChatHeader() + ChatColor.BLUE + "/awf enable" + ChatColor.WHITE + " > "
+					ChatColor.BLUE + "/awf enable" + ChatColor.WHITE + " > "
 							+ plugin.getPluginLang().getString("awf-command-enable", "Enable plugin."),
 					"/awf enable", plugin.getPluginLang().getString("awf-command-enable-hover",
 							"Plugin enabled by default. Use this if you entered /awf disable before!"));
@@ -60,7 +61,7 @@ public class HelpCommand {
 
 		if (sender.hasPermission("antiworldfly.use")) {
 			sendJsonClickableHoverableMessage(sender,
-					plugin.getChatHeader() + ChatColor.BLUE + "/awf disable" + ChatColor.WHITE + " > "
+					ChatColor.BLUE + "/awf disable" + ChatColor.WHITE + " > "
 							+ plugin.getPluginLang().getString("awf-command-disable", "Disable plugin."),
 					"/awf disable", plugin.getPluginLang().getString("awf-command-disable-hover",
 							"The plugin will not work until next reload or /awf enable."));
@@ -68,7 +69,7 @@ public class HelpCommand {
 
 		if (sender.hasPermission("antiworldfly.use")) {
 			sendJsonClickableHoverableMessage(sender,
-					plugin.getChatHeader() + ChatColor.BLUE + "/awf add <world>" + ChatColor.WHITE + " > "
+					ChatColor.BLUE + "/awf add <world>" + ChatColor.WHITE + " > "
 							+ plugin.getPluginLang().getString("awf-command-add", "Add WORLD to blocked worlds.")
 									.replace("WORLD", "world"),
 					"/awf add world", plugin.getPluginLang().getString("awf-command-add-hover",
@@ -76,7 +77,7 @@ public class HelpCommand {
 		}
 
 		if (sender.hasPermission("antiworldfly.use")) {
-			sendJsonClickableHoverableMessage(sender, plugin.getChatHeader() + ChatColor.BLUE + "/awf remove <world>"
+			sendJsonClickableHoverableMessage(sender, ChatColor.BLUE + "/awf remove <world>"
 					+ ChatColor.WHITE + " > "
 					+ plugin.getPluginLang().getString("awf-command-remove", "Remove WORLD from blocked worlds.")
 							.replace("WORLD", "world"),
@@ -85,7 +86,7 @@ public class HelpCommand {
 		}
 
 		if (sender.hasPermission("antiworldfly.use")) {
-			sendJsonClickableHoverableMessage(sender, plugin.getChatHeader() + ChatColor.BLUE + "/awf world"
+			sendJsonClickableHoverableMessage(sender, ChatColor.BLUE + "/awf world"
 							+ ChatColor.WHITE + " > "
 							+ plugin.getPluginLang().getString("awf-command-world", "Display the world you are standing in.")
 							.replace("WORLD", "world"),
@@ -118,7 +119,7 @@ public class HelpCommand {
 		// Send clickable and hoverable message if sender is a player and if no exception is caught.
 		if (sender instanceof Player) {
 			try {
-				FancyMessageSender.sendHoverableCommandMessage((Player) sender, message, command, hover, "blue");
+				FancyMessageSender.sendHoverableCommandMessage((Player) sender, message, command, hover);
 			} catch (Exception ex) {
 				plugin.getLogger().severe(
 						"Errors while trying to display clickable and hoverable message in /awf help command. Displaying standard message instead.");
