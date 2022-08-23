@@ -1,6 +1,6 @@
 #============================================================#
 # +--------------------------------------------------------+ #
-# |       Anti World Fly 2.4.1 English language file       | #
+# |       Anti World Fly 2.5.1 English language file       | #
 # |                      By DarkPyves                      | #
 # |                 Maintained by Sidpatchy                | #
 # +--------------------------------------------------------+ #
@@ -26,7 +26,10 @@ display-current-world: "You are currently in 'WORLD'"
 fly-disabled-chat: "Flying is disabled in this world."
 fly-disabled-title: "§9AntiWorldFly"
 fly-disabled-subtitle: "Flying is disabled in this world."
+elytra-disabled-subtitle: "Elytras are disabled in this world."
 command-disabled-chat: "Command is disabled in this world."
+fly-disabled-region: "Flying is disabled in this region."
+elytra-disabled-region: "Elytras are disabled in this region."
 
 # Related to /awf help.
 awf-command-disable: "Disable plugin till next reload."
